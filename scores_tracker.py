@@ -1,0 +1,40 @@
+scores = [67,98,76,54,35,47,90,80]
+backup = list(scores)
+print("Scores:", scores)
+print("Backup:", backup)
+
+print("\nScore Analysis")
+print("Highest scaore :", max(scores))
+print("Lowest score :", min(scores))
+print("Total score :",sum(scores))
+print("Number of students :", len(scores))
+average = sum(scores) / len(scores)
+print("Class average :", round(average, 2))
+
+print("\n---Sorted Scores---")
+print("sorted() ascending :", sorted(scores))
+print("Origional Unchanged :", scores)
+scores.sort()
+print("After sort()  :", scores)
+scores.sort(reverse=True) 
+print("Descending :", scores)
+
+scores.reverse()
+print("\nAfter reverse():", scores)
+ 
+print("\n---- Occurence ----")
+print("Count of 47 :", scores.count(47))
+print("Count of 90 :", scores.count(90))
+print("Count of 67 :", scores.count(67))
+print("\n--- Index Lookup ---")
+print("Frist Index of 90 :", scores.index(90))
+print("First Index of 54: ", scores.index(54))
+
+scores.insert(2, 100)
+print("\nAfter insert(2, 100):", scores)
+
+removed = scores.pop()
+print("Popped: ", removed)
+print("After popped:", scores)
+backup.clear()
+print("Backup after client: ", backup)
